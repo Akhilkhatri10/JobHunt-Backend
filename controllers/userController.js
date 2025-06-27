@@ -132,7 +132,8 @@ export const login = async (req, res) => {
             maxAge: 1 * 24 * 60 * 60 * 1000,
             httpOnly: true,  // Prevent JavaScript access
             secure: true,    // Only allow over HTTPS (useful in production)
-            sameSite: "strict" // Prevent CSRF attacks
+            // sameSite: "strict" // Prevent CSRF attacks
+            sameSite: "None"
 
         }).json({
             message: `welcome back ${user.fullname}`,
